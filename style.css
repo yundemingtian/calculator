@@ -1,0 +1,88 @@
+@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: '微软雅黑';
+}
+.calculator {
+  position: absolute;
+  top:5%;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+.calculator .cal-monitor {
+  position: absolute;
+  width: 100%;
+  height: 34%;
+  font-size: .4rem;
+}
+.cal-monitor .cal-result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  width: 96%;
+  margin: auto;
+  min-height: .4rem;
+  text-align: right;
+  white-space: nowrap;
+  color: #666;
+  line-height: .4rem;
+}
+.cal-result .data {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  transform-origin: right bottom;
+  transition: transform 200ms ease-in-out;
+}
+.calculator .cal-keys {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 66%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cal-keys .key {
+  flex: 1 25%;
+  width: 25%;
+  height: 20%;
+  outline: 0;
+  font-size: 20px;
+  font-family: '微软雅黑';
+  color: #666;
+  background: #fff;
+  border: 1px solid #eee;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.cal-keys .key:hover {
+  background-color: #1E9FFF;
+  color: #fff;
+}
+.calc-keys .key.equals {
+  color: #fff;
+  background-color: #FFCD17;
+}
+.calc-keys .key.equals:hover {
+  background-color: #FFDC2E;
+}
+.data{
+	font-size:24px;
+}
+@media screen and (min-width: 1025px) {
+  .calculator {
+    max-width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    box-shadow: 0 4px 20px 10px rgba(238, 238, 238, .75);
+  }
+}
